@@ -15,4 +15,13 @@ export const GuideContainer = styled.div`
     }
 
     div.space { height: 45px; }
+
+    div.copy-button {
+        position: relative;
+        button {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }
+    }
 `;

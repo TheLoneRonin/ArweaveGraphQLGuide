@@ -32,4 +32,14 @@ export const Container = styled.div`
             }
         }
     }
+
+    @media (max-width: 740px) {
+        div.content {
+            display: block;
+
+            div.content-panel {
+                padding: 15px;
+            }
+        }
+    }
 `;

@@ -23,4 +23,10 @@ export const NavigationContainer = styled.div`
     }
 
     div.spacer { height: 30px; }
+
+    @media (max-width: 740px) {
+        position: static;
+        max-width: 100%;
+        margin: 15px;
+    }
 `;

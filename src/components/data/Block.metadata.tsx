@@ -4,18 +4,9 @@ import { GuideContainer } from '../styles/Guide.style';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 
-export const BlockMetadata: FC = () => {
-    return(
-        <GuideContainer>
-            <h3 id="block-metadata">Block Metadata</h3>
+import { Button } from '@chakra-ui/core';
 
-            <p>
-                If you ever needed to know specific details about the transaction's block. You can retrieve it's block number
-                mining date, block hash and the previous block hash.
-            </p>
-
-            <SyntaxHighlighter language="graphql" style={dark}>
-{`query {
+export const Text = `query {
     transactions {
         edges {
             node {
@@ -28,7 +19,34 @@ export const BlockMetadata: FC = () => {
             }
         }
     }
-}`}
+}`;
+
+export const BlockMetadata: FC = () => {
+    return(
+        <GuideContainer>
+            <h3 id="block-metadata">Block Metadata</h3>
+
+            <p>
+                If you ever needed to know specific details about the transaction's block. You can retrieve it's block number
+                mining date, block hash and the previous block hash.
+            </p>
+
+            <div className="copy-button">
+                <Button
+                    size="sm"
+                    onClick={e => {
+                        const el: any = document.querySelector('input.bm-el');
+                        el.select();
+                        el.setSelectionRange(0, 99999);
+                        document.execCommand('copy');
+                }}>
+                    Copy
+                </Button>
+                <input type="text" value={Text} style={{ display: 'none' }} className="bm-el"/>
+            </div>
+
+            <SyntaxHighlighter language="graphql" style={dark}>
+            {Text}
             </SyntaxHighlighter>
         </GuideContainer>
     );

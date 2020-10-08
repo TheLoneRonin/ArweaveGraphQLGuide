@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { FC } from 'react';
 
 import { Container } from '../components/styles/Container';
@@ -21,6 +22,21 @@ import { Sort } from '../components/query/Sort';
 export const Index: FC = () => {
     return (
         <Container>
+            <Head>
+                <title>Arweave GraphQL Guide</title>
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="description" content={`An interactive and comprehensive Arweave GraphQL Guide`}/>
+
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:title" content={`Arweave GraphQL Guide`}/>
+                <meta name="twitter:description" content={`An interactive and comprehensive Arweave GraphQL Guide`}/>
+
+                <meta property="og:title" content={`Arweave GraphQL Guide`}/>
+                <meta property="og:image" content="https://gql-guide.vercel.app/preview.png"/>
+                <meta property="og:description" content={`An interactive and comprehensive Arweave GraphQL Guide`}/>
+
+                <link rel="icon" type="image/jpg" href={require('../components/image/logo.jpg')}/>
+            </Head>
             <Title/>
             <div className="content">
                 <Navigation/>

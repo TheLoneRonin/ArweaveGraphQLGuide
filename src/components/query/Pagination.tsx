@@ -4,6 +4,19 @@ import { GuideContainer } from '../styles/Guide.style';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import dark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 
+import { Button } from '@chakra-ui/core';
+
+export const Text = `query {
+    transactions(first: 5, after: "WyIyMDIwLTA5LTIzVDE2OjQ0OjE0LjY5MloiLDFd") {
+        edges {
+            cursor
+            node {
+                id
+            }
+        }
+    }
+}`;
+
 export const Pagination: FC = () => {
     return(
         <GuideContainer>
@@ -16,17 +29,22 @@ export const Pagination: FC = () => {
                 output transactions after the transaction.
             </p>
 
+            <div className="copy-button">
+                <Button
+                    size="sm"
+                    onClick={e => {
+                        const el: any = document.querySelector('input.pq-el');
+                        el.select();
+                        el.setSelectionRange(0, 99999);
+                        document.execCommand('copy');
+                }}>
+                    Copy
+                </Button>
+                <input type="text" value={Text} style={{ display: 'none' }} className="pq-el"/>
+            </div>
+
             <SyntaxHighlighter language="graphql" style={dark}>
-{`query {
-    transactions(first: 5, after: "WyIyMDIwLTA5LTIzVDE2OjQ0OjE0LjY5MloiLDFd") {
-        edges {
-            cursor
-            node {
-                id
-            }
-        }
-    }
-}`}
+            {Text}
             </SyntaxHighlighter>
         </GuideContainer>
     );
