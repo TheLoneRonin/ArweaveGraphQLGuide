@@ -33,14 +33,14 @@ export const Pagination: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.pq-el');
+                        const el: any = document.querySelector('textarea.pq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="pq-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="pq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

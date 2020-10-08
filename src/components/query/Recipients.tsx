@@ -29,14 +29,14 @@ export const Recipients: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.rq-el');
+                        const el: any = document.querySelector('textarea.rq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="rq-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="rq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

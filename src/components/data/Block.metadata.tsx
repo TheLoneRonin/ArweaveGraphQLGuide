@@ -35,14 +35,14 @@ export const BlockMetadata: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.bm-el');
+                        const el: any = document.querySelector('textarea.bm-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="bm-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }}  className="bm-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

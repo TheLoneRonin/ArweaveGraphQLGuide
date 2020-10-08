@@ -29,14 +29,14 @@ export const Owners: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.oq-el');
+                        const el: any = document.querySelector('textarea.oq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="oq-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="oq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

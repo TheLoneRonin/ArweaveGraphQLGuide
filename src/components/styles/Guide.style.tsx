@@ -21,7 +21,7 @@ export const GuideContainer = styled.div`
         button {
             position: absolute;
             right: 15px;
-            top: 20px;
+            top: 45px;
         }
     }
 `;

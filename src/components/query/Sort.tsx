@@ -40,14 +40,14 @@ export const Sort: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.sq-el');
+                        const el: any = document.querySelector('textarea.sq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text1} style={{ display: 'none' }} className="sq-el"/>
+                <textarea defaultValue={Text1} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>
@@ -64,14 +64,14 @@ export const Sort: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.sq2-el');
+                        const el: any = document.querySelector('textarea.sq2-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text2} style={{ display: 'none' }} className="sq2-el"/>
+                <textarea defaultValue={Text2} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sq2-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

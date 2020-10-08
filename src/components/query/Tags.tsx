@@ -56,14 +56,14 @@ export const Tags: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.tq-el');
+                        const el: any = document.querySelector('textarea.tq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text1} style={{ display: 'none' }} className="tq-el"/>
+                <textarea defaultValue={Text1} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="tq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>
@@ -80,14 +80,14 @@ export const Tags: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.tq2-el');
+                        const el: any = document.querySelector('textarea.tq2-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text2} style={{ display: 'none' }} className="tq2-el"/>
+                <textarea defaultValue={Text2} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="tq2-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

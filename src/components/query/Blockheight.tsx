@@ -30,14 +30,14 @@ export const Blockheight: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.bhq-el');
+                        const el: any = document.querySelector('textarea.bhq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="bhq-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }}  className="bhq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>

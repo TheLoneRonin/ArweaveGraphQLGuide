@@ -29,14 +29,14 @@ export const Transaction: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('input.txq-el');
+                        const el: any = document.querySelector('textarea.txq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <input type="text" value={Text} style={{ display: 'none' }} className="txq-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="txq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={dark}>
