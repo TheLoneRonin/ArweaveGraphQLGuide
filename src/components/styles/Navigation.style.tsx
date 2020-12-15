@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const NavigationContainer = styled.div`
     position: fixed;
     width: 100%;
-    max-width: 240px;
-    border-left: 2px solid #D8D8D8;
+    max-width: 320px;
 
     a.link {
         display: flex;
@@ -12,13 +11,19 @@ export const NavigationContainer = styled.div`
         font-size: 18px;
         width: 100%;
         padding: 0 0 0 15px;
-        height: 50px;
+        height: 30px;
         cursor: pointer;
 
-        &.mini {
-            height: 40px;
+        &.standard {
+            height: 30px;
             font-size: 16px;
             padding: 0 0 0 30px;
+        }
+
+        &.mini {
+            height: 25px;
+            font-size: 14px;
+            padding: 0 0 0 45px;
         }
     }
 

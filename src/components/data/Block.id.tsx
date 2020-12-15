@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { GuideContainer } from '../styles/Guide.style';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import dark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import style from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light';
 
 import { Button } from '@chakra-ui/core';
 
@@ -40,7 +40,7 @@ export const BlockID: FC = () => {
                 <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }}  className="td-el"/>
             </div>
 
-            <SyntaxHighlighter language="graphql" style={dark}>
+            <SyntaxHighlighter language="graphql" style={style}>
             {Text}
             </SyntaxHighlighter>
         </GuideContainer>

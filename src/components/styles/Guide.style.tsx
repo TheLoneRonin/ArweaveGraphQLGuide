@@ -4,7 +4,7 @@ export const GuideContainer = styled.div`
     padding: 0 0 90px 0;
 
     h3 {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         padding: 0 0 15px 0;
     }
@@ -18,6 +18,7 @@ export const GuideContainer = styled.div`
 
     div.copy-button {
         position: relative;
+        z-index: 11;
         button {
             position: absolute;
             right: 15px;

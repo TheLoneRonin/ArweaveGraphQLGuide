@@ -7,42 +7,38 @@ import style from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light
 import { Button } from '@chakra-ui/core';
 
 export const Text = `query {
-    transactions {
+    transactions(first: 5, after: "WyIyMDIwLTA5LTIzVDE2OjQ0OjE0LjY5MloiLDFd") {
         edges {
+            cursor
             node {
-                block {
-                    id
-                    timestamp
-                    height
-                    previous
-                }
+                id
             }
         }
     }
 }`;
 
-export const BlockMetadata: FC = () => {
+export const BlockPagination: FC = () => {
     return(
         <GuideContainer>
-            <h3 id="block-metadata">Block Metadata</h3>
+            <h3 id="block-pagination">Pagination</h3>
 
             <p>
-                If you ever needed to know specific details about the transaction's block. You can retrieve it's block number
-                mining date, block hash and the previous block hash.
+                Applying the cursor to the "after" parameter. You can retrieve blocks that were submitted after said block.
+                Keep in mind that if you are sorting by a HEIGHT_ASC. The blocks retrieved will be blocks prior to said block.
             </p>
 
             <div className="copy-button">
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('textarea.bm-el');
+                        const el: any = document.querySelector('textarea.bpq-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }}  className="bm-el"/>
+                <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="bpq-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={style}>

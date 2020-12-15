@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     min-height: 100vh;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: auto;
 
     font-family: 'Work Sans', 'monospace';
@@ -16,8 +16,12 @@ export const Container = styled.div`
             padding: 15px 15px 15px 255px;
 
             h2 {
+                font-size: 32px;
+                padding: 0 0 15px 0;
+            }
+
+            h3.lg {
                 font-size: 24px;
-                font-weight: bold;
                 padding: 0 0 15px 0;
             }
 

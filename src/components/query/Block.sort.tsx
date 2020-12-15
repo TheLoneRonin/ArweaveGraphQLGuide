@@ -7,32 +7,40 @@ import style from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light
 import { Button } from '@chakra-ui/core';
 
 export const Text1 = `query {
-    transactions(sort: HEIGHT_DESC) {
-        edges {
-            node {
-                id
-            }
+    blocks(sort: HEIGHT_DESC) {
+      edges {
+        cursor
+        node {
+            id
+            timestamp
+            height
+            previous  
         }
+      }
     }
 }`;
 
 export const Text2 = `query {
-    transactions(sort: HEIGHT_ASC) {
-        edges {
-            node {
-                id
-            }
+    blocks(sort: HEIGHT_ASC) {
+      edges {
+        cursor
+        node {
+            id
+            timestamp
+            height
+            previous  
         }
+      }
     }
 }`;
 
-export const Sort: FC = () => {
+export const BlockSort: FC = () => {
     return(
         <GuideContainer>
-            <h3 id="sorting">Sorting</h3>
+            <h3 id="block-sorting">Sorting</h3>
 
             <p>
-                If you need to sort transactions by blockheight. You can use the sort key with HEIGHT_DESC and HEIGHT_ASC.
+                If you need to sort blocks by blockheight. You can use the sort key with HEIGHT_DESC and HEIGHT_ASC.
                 HEIGHT_DESC orders them in descending order (newest first).
             </p>
 
@@ -40,14 +48,14 @@ export const Sort: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('textarea.sq-el');
+                        const el: any = document.querySelector('textarea.sqr-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <textarea defaultValue={Text1} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sq-el"/>
+                <textarea defaultValue={Text1} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sqr-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={style}>
@@ -64,14 +72,14 @@ export const Sort: FC = () => {
                 <Button
                     size="sm"
                     onClick={e => {
-                        const el: any = document.querySelector('textarea.sq2-el');
+                        const el: any = document.querySelector('textarea.sqr2-el');
                         el.select();
                         el.setSelectionRange(0, 99999);
                         document.execCommand('copy');
                 }}>
                     Copy
                 </Button>
-                <textarea defaultValue={Text2} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sq2-el"/>
+                <textarea defaultValue={Text2} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="sqr2-el"/>
             </div>
 
             <SyntaxHighlighter language="graphql" style={style}>

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { GuideContainer } from '../styles/Guide.style';
 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import dark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
+import style from 'react-syntax-highlighter/dist/cjs/styles/prism/material-light';
 
 import { Button } from '@chakra-ui/core';
 
@@ -56,7 +56,7 @@ export const FullData: FC = () => {
 
             <p>
                 The following is the full GraphQL structure. In most scenarios, you won't need the entire object, however,
-                if you do want the entire metadata of each Arweave block. You could retrieve it by using the following query.
+                if you do want the entire metadata of each Arweave transaction. You could retrieve it by using the following query.
             </p>
 
             <div className="copy-button">
@@ -73,7 +73,7 @@ export const FullData: FC = () => {
                 <textarea defaultValue={Text} style={{ overflow: 'hidden', height: 1, opacity: 0 }} className="fd-el"/>
             </div>
 
-            <SyntaxHighlighter language="graphql" style={dark}>
+            <SyntaxHighlighter language="graphql" style={style}>
             {Text}
             </SyntaxHighlighter>
         </GuideContainer>

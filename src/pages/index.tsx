@@ -10,6 +10,7 @@ import { BlockID } from '../components/data/Block.id';
 import { ArweaveTags } from '../components/data/Arweave.tags';
 import { BlockMetadata } from '../components/data/Block.metadata';
 import { PaymentData } from '../components/data/Payment.data';
+import { BlockFullData } from '../components/data/Block.full.data';
 
 import { Pagination } from '../components/query/Pagination';
 import { Transaction } from '../components/query/Transaction';
@@ -18,6 +19,10 @@ import { Owners } from '../components/query/Owners';
 import { Tags } from '../components/query/Tags';
 import { Blockheight } from '../components/query/Blockheight';
 import { Sort } from '../components/query/Sort';
+import { BlockPagination } from '../components/query/Block.pagination';
+import { Block } from '../components/query/Block';
+import { BlockRange } from '../components/query/Block.range';
+import { BlockSort } from '../components/query/Block.sort';
 
 export const Index: FC = () => {
     return (
@@ -42,24 +47,34 @@ export const Index: FC = () => {
                 <Navigation/>
                 <div className="content-panel">
                     <h2 id="data-structures">Data Structures</h2>
+
                     <p>
                         The Data Structures section describes the anatomy of queries. There are several examples
                         that provide context on how to traverse GraphQL. If you want to learn about the GraphQL 
                         structure at a more granular level. Check out the <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> Docs tab.
                     </p>
 
+                    <h3 className="lg" id="transaction-data-structures">Transaction Structures</h3>
+
                     <FullData/>
                     <BlockID/>
                     <ArweaveTags/>
                     <BlockMetadata/>
-                    <PaymentData/>
+                    <PaymentData />
+                    
+                    <h3 className="lg" id="block-data-structures">Block Structures</h3>
+
+                    <BlockFullData />
 
                     <h2 id="query-structures">Query Structures</h2>
+
                     <p>
                         The Query Structures section describes how you can retrieve transactions and blocks with GraphQL. The examples
                         provided can actually be demoed on <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> by copy and pasting
                         the example queries.
                     </p>
+
+                    <h3 className="lg" id="transaction-query-structures">Transaction Structures</h3>
 
                     <Pagination/>
                     <Transaction/>
@@ -67,7 +82,15 @@ export const Index: FC = () => {
                     <Owners/>
                     <Tags/>
                     <Blockheight/>
-                    <Sort/>
+                    <Sort />
+                    
+                    <h3 className="lg" id="block-query-structures">Block Structures</h3>
+
+                    <BlockPagination />
+                    <Block />
+                    <BlockRange />
+                    <BlockSort />
+                    
                 </div>
             </div>
         </Container>
