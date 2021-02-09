@@ -17,10 +17,10 @@ export const Container = styled.div`
 
             h2 {
                 font-size: 32px;
-                padding: 0 0 15px 0;
+                padding: 15px 0 15px 0;
             }
 
-            h2:not(:first-child) {
+            h2:not(:first-of-type) {
                 padding-top: 60px;
             }
 

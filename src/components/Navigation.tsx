@@ -8,6 +8,8 @@ export const Navigation: FC = () => {
                 Introduction
             </a>
 
+            <div className="spacer"></div>
+
             <a className="link" href="#data-structures">
                 Data Structures
             </a>

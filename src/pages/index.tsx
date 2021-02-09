@@ -42,10 +42,10 @@ export const Index: FC = () => {
 
                 <link rel="icon" type="image/jpg" href={require('../components/image/logo.jpg')}/>
             </Head>
-            <Title/>
             <div className="content">
                 <Navigation/>
                 <div className="content-panel">
+                    <Title/>
                     <h2 id="introduction">Introduction</h2>
 
                     <p>
