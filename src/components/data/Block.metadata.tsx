@@ -27,8 +27,8 @@ export const BlockMetadata: FC = () => {
             <h3 id="block-metadata">Block Metadata</h3>
 
             <p>
-                If you ever needed to know specific details about the transaction's block. You can retrieve it's block number
-                mining date, block hash and the previous block hash.
+                If you're curious to access details specific to a transaction's block, you can retrieve its block number,
+                mining date, block hash, and the previous block hash.
             </p>
 
             <div className="copy-button">

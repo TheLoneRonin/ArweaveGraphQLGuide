@@ -23,10 +23,10 @@ export const Pagination: FC = () => {
             <h3 id="pagination">Pagination</h3>
 
             <p>
-                There are three components to paginating queries. First, when you retrieve the GraphQL object. You need to make sure to retrieve
-                the cursor. The cursor is used to paginate after said edge. Second, you can specify the amount of elements to output by using the
-                first key. When first is 5, it outputs 5 transaction. And finally, the after key is used in conjunction with the cursor. This will
-                output transactions after the transaction.
+                There are three components to paginatiion queries. First, when retrieving the GraphQL object, always make sure to retrieve
+                the cursor. The cursor is used in queries to traverse to the next page. Second, specify the amount of elements to output by 
+                using the "first" key. When "first" is 5, the result set will include 5 transactions. And finally, specify the "after" string 
+                (i.e. the "cursor" from the previous page) to fetch the subsequent page.
             </p>
 
             <div className="copy-button">

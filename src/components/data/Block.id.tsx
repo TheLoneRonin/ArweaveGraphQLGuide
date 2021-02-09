@@ -22,8 +22,8 @@ export const BlockID: FC = () => {
             <h3 id="tx-id">Transaction IDs</h3>
 
             <p>
-                Probably the most common use of GraphQL would be to retrieve Transaction IDs. Once you retrieve the Transaction ID 
-                you can then pull the actual data from the block using the Arweave.js library's "getData()" function.
+                Probably the most common use of GraphQL is to retrieve Transaction IDs. Note: upon accessing Transaction IDs 
+                via GraphQL, you can retrieve associated data via the <a href="https://github.com/ArweaveTeam/arweave-js">arweave-js</a> "getData()" function.
             </p>
 
             <div className="copy-button">

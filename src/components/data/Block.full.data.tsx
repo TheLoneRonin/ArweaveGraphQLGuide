@@ -26,9 +26,9 @@ export const BlockFullData: FC = () => {
             <h3 id="full-block-data">Full GraphQL Object</h3>
 
             <p>
-                The following is the full GraphQL structure. In most scenarios, you won't need the entire object, however,
-                if you do want the entire metadata of each Arweave block. You could retrieve it by using the following query.
-                Please keep in mind the Arweave block queried does not contain transaction metadata.
+                The following is the full GraphQL structure. In most scenarios, you won't need the entire object; however,
+                if you do want the entire metadata of each Arweave block, you may retrieve it with the following query.
+                Please bear in mind: the Arweave block queried does not contain transaction metadata.
             </p>
 
             <div className="copy-button">

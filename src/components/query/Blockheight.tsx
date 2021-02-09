@@ -22,8 +22,8 @@ export const Blockheight: FC = () => {
             <h3 id="blockheight">By Block Height</h3>
 
             <p>
-                If you wanted to retrieve transactions from certain block numbers. You can specify a range. The following is an example
-                of how to retrieve all transactions from genesis to block #10.
+                If you wish to retrieve transactions from given block numbers, you may specify a block height range. The following is an example
+                of how to retrieve all transaction IDs from the genesis block to block #10.
             </p>
 
             <div className="copy-button">

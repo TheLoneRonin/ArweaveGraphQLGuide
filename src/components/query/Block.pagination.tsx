@@ -23,8 +23,8 @@ export const BlockPagination: FC = () => {
             <h3 id="block-pagination">Pagination</h3>
 
             <p>
-                Applying the cursor to the "after" parameter. You can retrieve blocks that were submitted after said block.
-                Keep in mind that if you are sorting by a HEIGHT_ASC. The blocks retrieved will be blocks prior to said block.
+                By applying the cursor to the "after" parameter, you may retrieve blocks that were submitted after the current block.
+                Please bear in mind: if you are sorting by HEIGHT_ASC, The blocks retrieved will be blocks prior to the current block.
             </p>
 
             <div className="copy-button">

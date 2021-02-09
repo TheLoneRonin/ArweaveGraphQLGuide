@@ -55,8 +55,8 @@ export const FullData: FC = () => {
             <h3 id="full-data">Full GraphQL Object</h3>
 
             <p>
-                The following is the full GraphQL structure. In most scenarios, you won't need the entire object, however,
-                if you do want the entire metadata of each Arweave transaction. You could retrieve it by using the following query.
+                The following is the full GraphQL structure. In most scenarios, you won't need the entire object; however,
+                if you do want the entire metadata of Arweave transactions, you may retrieve it with the following query.
             </p>
 
             <div className="copy-button">

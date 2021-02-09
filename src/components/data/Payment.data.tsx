@@ -35,8 +35,8 @@ export const PaymentData: FC = () => {
             <h3 id="payment-data">Payment Data</h3>
 
             <p>
-                If the data you're retrieving is payment related. You can retrieve the mining fee, the amount paid as well as who
-                received the AR and the address that sent the AR.
+                If you're interested in retrieving payment-related data, you may access the mining fee, the amount paid for the transaction, who
+                received the AR ("0" for data-only transactions), as well as the address that intially sent the AR.
             </p>
 
             <div className="copy-button">

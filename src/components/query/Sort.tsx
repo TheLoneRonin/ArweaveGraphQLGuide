@@ -32,9 +32,13 @@ export const Sort: FC = () => {
             <h3 id="sorting">Sorting</h3>
 
             <p>
-                If you need to sort transactions by blockheight. You can use the sort key with HEIGHT_DESC and HEIGHT_ASC.
-                HEIGHT_DESC orders them in descending order (newest first).
+                If you wish to sort transactions by block height, you may specify the sort order with HEIGHT_DESC or HEIGHT_ASC.
             </p>
+
+            <p>
+                HEIGHT_DESC orders them in descending order, with the most recent and unconfirmed/pending transactions appearing first:
+            </p>
+
 
             <div className="copy-button">
                 <Button
@@ -57,7 +61,7 @@ export const Sort: FC = () => {
             <div className="space"/>
 
             <p>
-                HEIGHT_ASC orders them in ascending order (oldest first).
+                HEIGHT_ASC orders them in ascending order (oldest first):
             </p>
 
             <div className="copy-button">
