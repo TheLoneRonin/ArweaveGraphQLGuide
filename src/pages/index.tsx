@@ -46,6 +46,14 @@ export const Index: FC = () => {
             <div className="content">
                 <Navigation/>
                 <div className="content-panel">
+                    <h2 id="introduction">Introduction</h2>
+
+                    <p>
+                        This guide is intended as a reference for developer's interested in leveraging Arweave GraphQL endpoints, 
+                        e.g. <a href="https://arweave.net/graphql">arweave.net/graphql</a>. GraphQL endpoints are currently
+                        the most robust method of querying for transaction/block metadata on Arweave.
+                    </p>
+
                     <h2 id="data-structures">Data Structures</h2>
 
                     <p>

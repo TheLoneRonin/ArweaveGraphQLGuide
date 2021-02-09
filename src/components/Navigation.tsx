@@ -4,6 +4,10 @@ import { NavigationContainer } from './styles/Navigation.style';
 export const Navigation: FC = () => {
     return(
         <NavigationContainer>
+            <a className="link" href="#introduction">
+                Introduction
+            </a>
+
             <a className="link" href="#data-structures">
                 Data Structures
             </a>

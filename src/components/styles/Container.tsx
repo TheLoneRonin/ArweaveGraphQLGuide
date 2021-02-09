@@ -20,6 +20,10 @@ export const Container = styled.div`
                 padding: 0 0 15px 0;
             }
 
+            h2:not(:first-child) {
+                padding-top: 60px;
+            }
+
             h3.lg {
                 font-size: 24px;
                 padding: 0 0 15px 0;
