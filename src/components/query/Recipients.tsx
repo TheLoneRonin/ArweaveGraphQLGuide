@@ -22,7 +22,7 @@ export const Recipients: FC = () => {
             <h3 id="recipients">By Recipients</h3>
 
             <p>
-                You can retrieve one, or multiple recipients of transactions by specifying their address in an array.
+                You may retrieve one or more recipients by specifying their address(es) in an array.
             </p>
 
             <div className="copy-button">

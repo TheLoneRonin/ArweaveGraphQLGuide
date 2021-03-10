@@ -29,8 +29,8 @@ export const BlockRange: FC = () => {
             <h3 id="block-range">Block Range</h3>
 
             <p>
-                You can utilize the height parameter with a "min" and "max" value. It will return blocks within that specific
-                range. The following is an example that retrieves blocks 587540 to 587550.
+                You may utilize the height parameter with a "min" and "max" value. This will return blocks within a specified
+                range. The following is an example that retrieves blocks 587540 to 587550:
             </p>
 
             <div className="copy-button">

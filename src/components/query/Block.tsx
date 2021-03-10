@@ -26,8 +26,7 @@ export const Block: FC = () => {
             <h3 id="block-ids">By Block ID</h3>
 
             <p>
-                You can retrieve one or multiple blocks by specifying the "ids" parameter by specifying each
-                block id in an array.                 
+                You may retrieve one or more blocks by specifying their IDs in an array.                 
             </p>
 
             <div className="copy-button">

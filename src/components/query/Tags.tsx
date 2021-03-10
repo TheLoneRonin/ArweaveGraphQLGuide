@@ -48,8 +48,11 @@ export const Tags: FC = () => {
             <h3 id="tags">By Tags</h3>
 
             <p>
-                You can retrieve transactions by via tags. In the case of just retrieving by a single tag. You can structure your query
-                as follows.
+                You may retrieve transactions via tag name/value pairs.
+            </p>
+
+            <p>
+                To look up transactions by a single tag, you may structure your query as follows:
             </p>
 
             <div className="copy-button">
@@ -73,7 +76,7 @@ export const Tags: FC = () => {
             <div className="space"/>
 
             <p>
-                If you want to retrieve by multiple tags. You can structure your query this way.
+                Alternatively, look up transactions using multiple tags like so:
             </p>
 
             <div className="copy-button">

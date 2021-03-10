@@ -22,7 +22,7 @@ export const Transaction: FC = () => {
             <h3 id="transaction">By Transaction ID</h3>
 
             <p>
-                You can retrieve one, or multiple transactions by specifying their ids in an array.
+                You may retrieve one or more transactions by specifying their IDs in an array.
             </p>
 
             <div className="copy-button">

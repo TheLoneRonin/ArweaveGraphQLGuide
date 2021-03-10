@@ -42,16 +42,24 @@ export const Index: FC = () => {
 
                 <link rel="icon" type="image/jpg" href={require('../components/image/logo.jpg')}/>
             </Head>
-            <Title/>
             <div className="content">
                 <Navigation/>
                 <div className="content-panel">
+                    <Title/>
+                    <h2 id="introduction">Introduction</h2>
+
+                    <p>
+                        This guide is intended as a reference for developer's interested in leveraging Arweave GraphQL endpoints, 
+                        e.g. <a href="https://arweave.net/graphql">arweave.net/graphql</a>. GraphQL endpoints are currently
+                        the most robust method of querying for transaction/block metadata on Arweave.
+                    </p>
+
                     <h2 id="data-structures">Data Structures</h2>
 
                     <p>
                         The Data Structures section describes the anatomy of queries. There are several examples
                         that provide context on how to traverse GraphQL. If you want to learn about the GraphQL 
-                        structure at a more granular level. Check out the <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> Docs tab.
+                        structure at a more granular level, check out the <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> Docs tab.
                     </p>
 
                     <h3 className="lg" id="transaction-data-structures">Transaction Structures</h3>
@@ -69,9 +77,9 @@ export const Index: FC = () => {
                     <h2 id="query-structures">Query Structures</h2>
 
                     <p>
-                        The Query Structures section describes how you can retrieve transactions and blocks with GraphQL. The examples
-                        provided can actually be demoed on <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> by copy and pasting
-                        the example queries.
+                        The Query Structures section describes the ways in which you may retrieve transactions and blocks with GraphQL. The examples
+                        provided may be demoed on <a href="https://arweave.dev/graphql">arweave.dev/graphql</a> by copy and pasting
+                        the provided example queries.
                     </p>
 
                     <h3 className="lg" id="transaction-query-structures">Transaction Structures</h3>

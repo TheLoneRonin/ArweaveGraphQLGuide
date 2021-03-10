@@ -26,8 +26,8 @@ export const ArweaveTags: FC = () => {
             <h3 id="arweave-tags">Arweave Tags</h3>
 
             <p>
-                Sometimes, you might need to see the tags that are part of the Arweave transaction. In this
-                example you can retrieve both the tag name and the value as an array.
+                Sometimes, you may need to access the tags embedded in a given Arweave transaction. 
+                In this example you can retrieve both the tag name and the value as an array.
             </p>
 
             <div className="copy-button">

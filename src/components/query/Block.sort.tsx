@@ -40,8 +40,11 @@ export const BlockSort: FC = () => {
             <h3 id="block-sorting">Sorting</h3>
 
             <p>
-                If you need to sort blocks by blockheight. You can use the sort key with HEIGHT_DESC and HEIGHT_ASC.
-                HEIGHT_DESC orders them in descending order (newest first).
+                If you wish to sort blocks by block height, you may specify the sort order with HEIGHT_DESC or HEIGHT_ASC.
+            </p>
+
+            <p>
+                HEIGHT_DESC orders them in descending order, with the most recent blocks appearing first:
             </p>
 
             <div className="copy-button">

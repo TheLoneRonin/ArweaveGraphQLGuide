@@ -22,7 +22,7 @@ export const Owners: FC = () => {
             <h3 id="owners">By Owners</h3>
 
             <p>
-                You can retrieve one, or multiple owners of transactions by specifying their address in an array.
+                You may retrieve one or more owners by specifying their address(es) in an array.
             </p>
 
             <div className="copy-button">
